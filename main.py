@@ -22,6 +22,11 @@ def main():
     clock = pygame.time.Clock()
     dt = 0 # dt = "delta time"
 
+    font = pygame.font.SysFont("Arial", 36)
+    text_surface = font.render(TITLE, True, (255, 255, 255))
+    text_rect = text_surface.get_rect()
+    text_rect.center = (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)
+
     while True:
         log_state()
         for event in pygame.event.get():
@@ -33,6 +38,10 @@ def main():
 
         for d in drawable:
             d.draw(screen)
+
+        # Inside the main game loop:
+        screen.fill((127, 127, 127)) # Clear screen with background color
+        screen.blit(text_surface, text_rect) # Draw the text
 
         pygame.display.flip()
         # wait 1/{param} of a second, return # of ms
