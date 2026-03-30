@@ -6,3 +6,8 @@ D&D Ruleset provided in the 2025 Player's Handbook.
 
 First step, get a working PyGame, new window to display.
 
+Notes:
+
+- Utilizing uv package manager:  https://docs.astral.sh/uv/#installation
+
+- So far, just ran `uv init players-handbook-2024` in the parent directory.
